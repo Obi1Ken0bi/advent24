@@ -16,25 +16,14 @@ fun main() {
     println(res)
 }
 
-fun isCorrectReport(levels: List<Int>): Boolean {
-    if (levels.size < 2) return true
-    val asc = levels[1] > levels[0]
-    for (i in (1..<levels.size)) {
-        val curr = levels[i]
-        val prev = levels[i - 1]
-        val dif = abs(curr - prev)
-        if (dif < 1 || dif > 3) {
-            return false
-        }
-        if (asc) {
-            if (curr < prev) {
-                return false
-            }
-        } else {
-            if (curr > prev) {
-                return false
-            }
+fun isCorrectReport(levels: List<Int>): Boolean =
+    if (levels.size < 2) {
+        true
+    } else {
+        val isAscending = levels[1] > levels[0]
+        levels.zipWithNext().all { (prev, curr) ->
+            val diff = abs(curr - prev)
+            diff in 1..3 &&
+                (isAscending && curr >= prev || !isAscending && curr <= prev)
         }
     }
-    return true
-}
