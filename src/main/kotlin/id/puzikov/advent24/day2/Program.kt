@@ -3,20 +3,21 @@ package id.puzikov.advent24.day2
 import java.io.File
 import kotlin.math.abs
 
-/**
- *
- *    - The levels are either all increasing or all decreasing.
- *    - Any two adjacent levels differ by at least one and at most three.
- * How many reports are safe?
- */
 fun main() {
     val inputFile = File("src/main/resources/id/puzikov/advent24/day2/input.txt")
     val reports = inputFile.readLines().map { report -> report.split(" ").map { it.toInt() } }
-    val res = reports.count { isCorrectReport(it) }
+    val res =
+        reports
+            .map { report ->
+                print(report)
+                val correctReport = isCorrectReport(report)
+                println(" $correctReport")
+                correctReport
+            }.count { it }
     println(res)
 }
 
-fun isCorrectReport(levels: List<Int>): Boolean =
+private fun isCorrectReport(levels: List<Int>): Boolean =
     if (levels.size < 2) {
         true
     } else {
