@@ -29,7 +29,7 @@ Advent of Code is a series of daily coding puzzles released every December, desi
 
 3. Run a specific day's solution:
    ```bash
-   java -cp target/classes ru.puzikov.advent24.day1.Program
+   java -cp target/classes id.puzikov.advent24.day1.Program
    ```
 
 ---
