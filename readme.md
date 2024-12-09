@@ -45,7 +45,7 @@ The project is organized using Java/Kotlin packages for each day. Each day inclu
 src/
 ├── main/
 │   ├── kotlin/
-│   │   └── ru/
+│   │   └── id/
 │   │       └── puzikov/
 │   │           └── advent24/
 │   │               ├── day1/
@@ -53,7 +53,7 @@ src/
 │   │               │   ├── Program2.kt
 │   │               └── ...
 │   └── resources/
-│       └── ru/
+│       └── id/
 │           └── puzikov/
 │               └── advent24/
 │                   ├── day1/

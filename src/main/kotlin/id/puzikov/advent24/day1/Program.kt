@@ -1,4 +1,4 @@
-package ru.puzikov.advent24.day1
+package id.puzikov.advent24.day1
 
 import java.io.File
 import kotlin.math.abs
@@ -28,7 +28,7 @@ import kotlin.math.abs
  *
  */
 fun main() {
-    val input = File("src/main/resources/ru/puzikov/advent24/day1/input.txt")
+    val input = File("src/main/resources/id/puzikov/advent24/day1/input.txt")
     val list1 = ArrayList<Int>()
     val list2 = ArrayList<Int>()
     input
