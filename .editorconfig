@@ -1,0 +1,25 @@
+root = true
+
+# noinspection EditorConfigKeyCorrectness
+[*.{kt,kts}]
+indent_size = 4
+insert_final_newline = true
+max_line_length = 140
+charset = utf-8
+trim_trailing_whitespace = true
+indent_style = space
+ktlint_function_signature_rule_force_multiline_when_parameter_count_greater_or_equal_than = 4
+ktlint_class_signature_rule_force_multiline_when_parameter_count_greater_or_equal_than = 4
+ij_kotlin_allow_trailing_comma_on_call_site = false
+ij_kotlin_allow_trailing_comma = false
+ij_kotlin_imports_layout=java.**,javax.**,kotlin.**,|,*,|,com.openwaygroup.**,|,^
+# noinspection EditorConfigKeyCorrectness
+[**/src/test/**/*.kt]
+ij_kotlin_imports_layout=org.assertj.**,org.junit.**,kotlin.test.**,|,java.**,javax.**,kotlin.**,|,*,|,com.openwaygroup.**,|,^
+max_line_length = 180
+ktlint_standard_argument-list-wrapping = disabled
+ktlint_standard_multiline-expression-wrapping = disabled
+ktlint_standard_no-consecutive-blank-lines = disabled
+ktlint_standard_no-multi-spaces = disabled
+ktlint_standard_function-expression-body = disabled
+ktlint_standard_no-consecutive-comments = disabled
